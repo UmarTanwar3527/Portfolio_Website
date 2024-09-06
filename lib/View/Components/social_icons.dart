@@ -19,22 +19,22 @@ class SocialIcons extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             SocialIconDesign(
-                socialLink: "https://www.youtube.com/@wtf-code", // link to open
-                iconUrl: // icon link from google
-                    'https://cdn-icons-png.flaticon.com/512/4096/4096116.png'),
-            SocialIconDesign(
-                socialLink: "https://github.com/Nabinji",
-                iconUrl:
-                    'https://cdn-icons-png.freepik.com/256/11023/11023876.png'),
-            SocialIconDesign(
                 socialLink:
-                    "https://www.linkedin.com/in/nabin-paudyal-7a3110216/",
+                    "https://www.linkedin.com/in/umartanwar/",
                 iconUrl:
                     'https://static.vecteezy.com/system/resources/previews/016/716/470/non_2x/linkedin-icon-free-png.png'),
             SocialIconDesign(
-                socialLink: "https://www.instagram.com/wtfcode01/",
+                socialLink: "https://github.com/UmarTanwar3527",
                 iconUrl:
-                    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/768px-Instagram_icon.png'),
+                    'https://cdn-icons-png.freepik.com/256/11023/11023876.png'),                    
+            SocialIconDesign(
+                socialLink: "https://leetcode.com/u/UmarTanwar_3527/",
+                iconUrl:
+                    'https://img.icons8.com/?size=100&id=9L16NypUzu38&format=png&color=000000'),
+            SocialIconDesign(
+                socialLink: "https://www.geeksforgeeks.org/user/umartanwar27/", // link to open
+                iconUrl: // icon link from google
+                    'https://img.icons8.com/?size=100&id=AbQBhN9v62Ob&format=png&color=000000'),
           ],
         ),
       ),
