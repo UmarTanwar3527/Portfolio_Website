@@ -13,14 +13,14 @@ class Footer extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              "Built with ❤ by",
+              "Built by",
             ),
             TextButton(
                 onPressed: () {
-                  launchUrl(Uri.parse("https://www.facebook.com/nabin.paudyal.57"),);
+                  launchUrl(Uri.parse("https://twitter.com/umar_tanwar27"),);
                 },
                 child: const Text(
-                  "Nabin Paudyal",
+                  "Mohammed Umar Tanwar",
                 ))
           ],
         )
