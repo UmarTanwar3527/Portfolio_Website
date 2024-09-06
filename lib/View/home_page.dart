@@ -7,9 +7,9 @@ import 'package:portfolio_website/View/Components/prfile_and_intro.dart';
 import 'package:portfolio_website/View/Components/recent_project.dart';
 import 'package:portfolio_website/View/Components/social_icons.dart';
 import 'package:portfolio_website/View/Components/top_skill.dart';
-import 'package:portfolio_website/View/components/contact_form.dart';
-import 'package:portfolio_website/View/components/footer.dart';
-import 'package:portfolio_website/View/components/topbar.dart';
+import 'package:portfolio_website/View/Components/contact_form.dart';
+import 'package:portfolio_website/View/Components/footer.dart';
+import 'package:portfolio_website/View/Components/topbar.dart';
 
 class DeveloperPortFolio extends StatelessWidget {
   DeveloperPortFolio({super.key});
