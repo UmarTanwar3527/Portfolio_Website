@@ -18,7 +18,7 @@ class ProfileAndIntro extends StatelessWidget {
               height: Responsive.isMobile(context)
                   ? Responsive.heightOfScreen(context) / 3
                   : Responsive.heightOfScreen(context) - 70,
-              child: Image.asset("asset/images/profile-image.png"),
+              child: Image.asset("asset/images/profileimg.jpg"),
             ),
             SizedBox(
               width: Responsive.isMobile(context)
