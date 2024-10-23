@@ -22,23 +22,23 @@ class RecentProject extends StatelessWidget {
           children: [
             ProjectCard(
               projectModel: projects[0],
-              url: "https://youtu.be/Rkjr4m3SMyo?si=g-mg8KAlXYJ6mv4G",
+              url: "",
             ),
             ProjectCard(
               projectModel: projects[1],
-              url: "https://youtu.be/UHUSqJDKe-Q?si=qRQugB6fyxt6fgOT",
+              url: "",
             ),
             ProjectCard(
               projectModel: projects[2],
-              url: "https://youtu.be/RSFj5HimAd4?si=ZZdpsfq6XzFIrcgH",
+              url: "",
             ),
             ProjectCard(
               projectModel: projects[3],
-              url: "https://youtu.be/PYSg0_lfff4?si=rTkkMgZI2P22ODf6",
+              url: "",
             ),
             ProjectCard(
               projectModel: projects[4],
-              url: "https://youtu.be/qc-2JZ42Uz8?si=E4P7TQ1hCFMRFk55",
+              url: "",
             ),
           ],
         )
