@@ -40,6 +40,10 @@ class RecentProject extends StatelessWidget {
               projectModel: projects[4],
               url: "",
             ),
+            ProjectCard(
+              projectModel: projects[5],
+              url: "",
+            ),
           ],
         )
       ],
@@ -105,7 +109,7 @@ class ProjectCard extends StatelessWidget {
                     );
                   },
                   child: const Text(
-                    "Check In Out",
+                    "Check It Out",
                     style: TextStyle(fontSize: 17),
                   ),
                 ),

@@ -41,4 +41,10 @@ List<ProjectModel> projects = [
     imgURL: 'asset/images/quiz.png',
     projectName: 'Quiz App',
   ),
+  ProjectModel(
+    description:
+        "A Wallpaper App in Flutter that allows users to browse, search, and set high-quality wallpapers effortlessly, enhancing their device’s look with just a tap.",
+    imgURL: 'asset/images/wallpaperapp.png',
+    projectName: 'Wallpaper App',
+  ),
 ];
