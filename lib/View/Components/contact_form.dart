@@ -1,9 +1,48 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_website/Responsive/responsive.dart';
 import 'package:portfolio_website/Utils/colors.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-class ContactForm extends StatelessWidget {
-  const ContactForm({super.key});
+class ContactForm extends StatefulWidget {
+  const ContactForm({Key? key}) : super(key: key);
+
+  @override
+  State<ContactForm> createState() => _ContactFormState();
+}
+
+class _ContactFormState extends State<ContactForm> {
+  final _nameController = TextEditingController();
+  final _emailController = TextEditingController();
+  final _phoneController = TextEditingController();
+  final _messageController = TextEditingController();
+
+  Future<void> sendEmail() async {
+    final Uri emailUri = Uri(
+      scheme: 'mailto',
+      path: 'umartanwar01@gmail.com',
+      queryParameters: {
+        'subject': 'Portfolio Website Contact Form',
+        'body': """
+          Name: ${_nameController.text}
+          Email: ${_emailController.text}
+          Phone: ${_phoneController.text}
+          Message: ${_messageController.text}
+        """,
+      },
+    );
+
+    try {
+      await launchUrl(emailUri);
+      if (kDebugMode) {
+        print('Email app launched');
+      }
+    } catch (e) {
+      if (kDebugMode) {
+        print('Could not launch email app: $e');
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,10 +76,10 @@ class ContactForm extends StatelessWidget {
               padding: const EdgeInsets.all(20),
               child: Column(
                 children: [
-                  contactFormField("Name*", 1, "Your Name"),
-                  contactFormField("Email*", 1, "Your Email"),
-                  contactFormField("Phone Number", 1, "Your Number"),
-                  contactFormField("Message*", 10, "Your Message"),
+                  contactFormField("Name*", 1, "Your Name", _nameController),
+                  contactFormField("Email*", 1, "Your Email", _emailController),
+                  contactFormField("Phone Number", 1, "Your Number", _phoneController),
+                  contactFormField("Message*", 10, "Your Message", _messageController),
                   Row(
                     children: [
                       Expanded(
@@ -48,7 +87,9 @@ class ContactForm extends StatelessWidget {
                           style: OutlinedButton.styleFrom(
                             backgroundColor: Colors.blue,
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            sendEmail();
+                          },
                           child: const Text(
                             "Submit",
                             style: TextStyle(
@@ -70,7 +111,7 @@ class ContactForm extends StatelessWidget {
     );
   }
 
-  contactFormField(name, maxLine, hintText) {
+  Widget contactFormField(name, maxLine, hintText, controller) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
       child: Column(
@@ -87,6 +128,7 @@ class ContactForm extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 8),
             child: TextField(
+              controller: controller,
               maxLines: maxLine,
               decoration: InputDecoration(
                   hintText: hintText,
