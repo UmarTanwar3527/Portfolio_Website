@@ -35,16 +35,19 @@ class TopSkills extends StatelessWidget {
               ),
               SkillCard(
                   url:
+                      'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/800px-Python-logo-notext.svg.png'),
+              SkillCard(
+                  url:
                       'https://miro.medium.com/v2/resize:fit:300/1*R4c8lHBHuH5qyqOtZb3h-w.png'),
               SkillCard(
                   url:
                       'https://cdn-icons-png.flaticon.com/512/1493/1493169.png'),
               SkillCard(
                   url:
-                      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1667px-Figma-logo.svg.png'),
+                      'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/180px-GitHub_Invertocat_Logo.svg.png'),
               SkillCard(
                   url:
-                      'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/180px-GitHub_Invertocat_Logo.svg.png'),
+                      'https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/1200px-Java_programming_language_logo.svg.png'),
             ],
           ),
         ),
