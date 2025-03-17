@@ -48,6 +48,30 @@ class TopSkills extends StatelessWidget {
               SkillCard(
                   url:
                       'https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/1200px-Java_programming_language_logo.svg.png'),
+              SkillCard(
+                  url:
+                      'https://banner2.cleanpng.com/20180411/wre/avf0mauoj.webp'),
+              SkillCard(
+                  url:
+                      'https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg'),
+              SkillCard(
+                  url:
+                      'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png'),
+              SkillCard(
+                  url:
+                      'https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0tsd0732obeqonqfx0gy.png'),
+              SkillCard(
+                  url:
+                      'https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg'),
+              SkillCard(
+                  url:
+                      'https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg'),
+              SkillCard(
+                  url:
+                      'https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg'),
+              SkillCard(
+                  url:
+                      'https://upload.wikimedia.org/wikipedia/commons/3/38/SQLite370.svg'),
             ],
           ),
         ),

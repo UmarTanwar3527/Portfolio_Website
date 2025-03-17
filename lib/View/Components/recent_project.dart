@@ -21,29 +21,29 @@ class RecentProject extends StatelessWidget {
         Wrap(
           children: [
             ProjectCard(
-              projectModel: projects[0],
-              url: "",
-            ),
-            ProjectCard(
-              projectModel: projects[1],
-              url: "",
-            ),
-            ProjectCard(
-              projectModel: projects[2],
-              url: "",
-            ),
-            ProjectCard(
-              projectModel: projects[3],
-              url: "",
-            ),
-            ProjectCard(
-              projectModel: projects[4],
-              url: "",
-            ),
-            ProjectCard(
               projectModel: projects[5],
-              url: "",
+              url: "https://github.com/UmarTanwar3527/Wallpaper-App",
             ),
+            // ProjectCard(
+            //   projectModel: projects[1],
+            //   url: "",
+            // ),
+            // ProjectCard(
+            //   projectModel: projects[2],
+            //   url: "",
+            // ),
+            // ProjectCard(
+            //   projectModel: projects[3],
+            //   url: "",
+            // ),
+            // ProjectCard(
+            //   projectModel: projects[4],
+            //   url: "",
+            // ),
+            // ProjectCard(
+            //   projectModel: projects[5],
+            //   url: "",
+            // ),
           ],
         )
       ],
