@@ -61,7 +61,7 @@ class ProfileAndIntro extends StatelessWidget {
                             ),
                           ),
                           const Text(
-                            "I'm Umar Tanwar, a Software Devloper\nSpecializing in Flutter Developemnt, API Integration, Python Development, & Data Scientist.",
+                            "I'm Umar Tanwar, a Software Developer.\nSpecializing in Flutter Developement, API Integration, Python Development, & Data Science.",
                             style: TextStyle(
                               fontSize: 17.5,
                               fontWeight: FontWeight.w500,
