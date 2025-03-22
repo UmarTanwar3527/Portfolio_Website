@@ -23,13 +23,17 @@ class DeveloperPortFolio extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: false,
-        title: const Text(
-          "Umar Tanwar",
-          style: TextStyle(
-            fontSize: 26,
-            fontWeight: FontWeight.w900,
-            color: textColor,
-          ),
+        title: const Row(
+          children: [
+            Text(
+              "Umar Tanwar",
+              style: TextStyle(
+                fontSize: 26,
+                fontWeight: FontWeight.w900,
+                color: textColor,
+              ),
+            ),
+          ],
         ),
         backgroundColor: Colors.white,
         elevation: 3,

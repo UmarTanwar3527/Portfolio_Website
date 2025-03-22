@@ -18,7 +18,7 @@ class ProfileAndIntro extends StatelessWidget {
               height: Responsive.isMobile(context)
                   ? Responsive.heightOfScreen(context) / 3
                   : Responsive.heightOfScreen(context) - 70,
-              child: Image.asset("asset/images/professionalImage.png"),
+              child: Image.asset("asset/images/image.png"),
             ),
             SizedBox(
               width: Responsive.isMobile(context)
@@ -61,7 +61,7 @@ class ProfileAndIntro extends StatelessWidget {
                             ),
                           ),
                           const Text(
-                            "I'm Umar Tanwar,\na Developer & Data Scientist\nSpecializing in Flutter App Decelopemnt, UI Design, & Data Scientist.",
+                            "I'm Umar Tanwar, a Software Devloper\nSpecializing in Flutter Developemnt, API Integration, Python Development, & Data Scientist.",
                             style: TextStyle(
                               fontSize: 17.5,
                               fontWeight: FontWeight.w500,

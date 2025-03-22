@@ -21,8 +21,32 @@ class RecentProject extends StatelessWidget {
         Wrap(
           children: [
             ProjectCard(
-              projectModel: projects[5],
+              projectModel: projects[0],
               url: "https://github.com/UmarTanwar3527/Wallpaper-App",
+            ),
+            ProjectCard(
+              projectModel: projects[1],
+              url: "https://github.com/UmarTanwar3527/flutter-auth",
+            ),
+            ProjectCard(
+              projectModel: projects[2],
+              url: "https://github.com/UmarTanwar3527/Milk-Quality-Prediction",
+            ),
+            ProjectCard(
+              projectModel: projects[3],
+              url: "https://github.com/UmarTanwar3527/django-contactus-project",
+            ),
+            ProjectCard(
+              projectModel: projects[4],
+              url: "https://github.com/UmarTanwar3527/NLPsentimentanalysisProject5",
+            ),
+            ProjectCard(
+              projectModel: projects[5],
+              url: "https://github.com/UmarTanwar3527/RestaurantReviws",
+            ),
+            ProjectCard(
+              projectModel: projects[6],
+              url: "https://github.com/UmarTanwar3527/Storing-ChatGPT-Responce-In-Docs-File-with-Question-",
             ),
             // ProjectCard(
             //   projectModel: projects[1],

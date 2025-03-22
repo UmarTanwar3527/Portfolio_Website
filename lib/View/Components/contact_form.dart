@@ -2,10 +2,11 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_website/Responsive/responsive.dart';
 import 'package:portfolio_website/Utils/colors.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:mailer/mailer.dart';
+import 'package:mailer/smtp_server/gmail.dart';
 
 class ContactForm extends StatefulWidget {
-  const ContactForm({Key? key}) : super(key: key);
+  const ContactForm({super.key});
 
   @override
   State<ContactForm> createState() => _ContactFormState();
@@ -18,28 +19,30 @@ class _ContactFormState extends State<ContactForm> {
   final _messageController = TextEditingController();
 
   Future<void> sendEmail() async {
-    final Uri emailUri = Uri(
-      scheme: 'mailto',
-      path: 'umartanwar01@gmail.com',
-      queryParameters: {
-        'subject': 'Portfolio Website Contact Form',
-        'body': """
-          Name: ${_nameController.text}
-          Email: ${_emailController.text}
-          Phone: ${_phoneController.text}
-          Message: ${_messageController.text}
-        """,
-      },
-    );
+    final String username = 'umartanwar027@gmail.com';
+    final String password = '#PortfolioTanwar_0786';
+
+    final smtpServer = gmail(username, password);
+
+    final message = Message()
+      ..from = Address(username, 'Your Name')
+      ..recipients.add('umartanwar01@gmail.com')
+      ..subject = 'Portfolio Website Contact Form'
+      ..html = """
+          <p>Name: ${_nameController.text}</p>
+          <p>Email: ${_emailController.text}</p>
+          <p>Phone: ${_phoneController.text}</p>
+          <p>Message: ${_messageController.text}</p>
+        """;
 
     try {
-      await launchUrl(emailUri);
+      final sendReport = await send(message, smtpServer);
       if (kDebugMode) {
-        print('Email app launched');
+        print('Email sent: ${sendReport.toString()}');
       }
     } catch (e) {
       if (kDebugMode) {
-        print('Could not launch email app: $e');
+        print('Could not send email: $e');
       }
     }
   }
