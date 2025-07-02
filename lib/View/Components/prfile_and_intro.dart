@@ -10,11 +10,10 @@ class ProfileAndIntro extends StatelessWidget {
       children: [
         Wrap(
           children: [
-            SizedBox(
+           SizedBox(
               width: Responsive.isMobile(context)
-                  // it take full widt in mobile screen but only tkes half width in web and desktop
                   ? Responsive.widthOfScreen(context)
-                  : Responsive.widthOfScreen(context) / 2,
+                  : (Responsive.widthOfScreen(context) > 800 ? 400 : Responsive.widthOfScreen(context) / 2),
               height: Responsive.isMobile(context)
                   ? Responsive.heightOfScreen(context) / 3
                   : Responsive.heightOfScreen(context) - 70,
@@ -22,9 +21,8 @@ class ProfileAndIntro extends StatelessWidget {
             ),
             SizedBox(
               width: Responsive.isMobile(context)
-                  // it take full widt in mobile screen but only tkes half width in web and desktop
                   ? Responsive.widthOfScreen(context)
-                  : Responsive.widthOfScreen(context) / 2,
+                  : (Responsive.widthOfScreen(context) > 800 ? 400 : Responsive.widthOfScreen(context) / 2),
               height: Responsive.isMobile(context)
                   ? Responsive.heightOfScreen(context) / 3
                   : Responsive.heightOfScreen(context) - 70,
@@ -36,11 +34,11 @@ class ProfileAndIntro extends StatelessWidget {
                       : 450,
                   child: DecoratedBox(
                     decoration: BoxDecoration(
-                      boxShadow: const [
+                     boxShadow: [
                         BoxShadow(
-                          color: Colors.grey,
-                          blurRadius: 8,
-                          spreadRadius: 5,
+                          color: Colors.grey.shade300,
+                          blurRadius: 4,
+                          spreadRadius: 2,
                         ),
                       ],
                       borderRadius: BorderRadius.circular(10),
@@ -56,15 +54,16 @@ class ProfileAndIntro extends StatelessWidget {
                             "Hello!",
                             style: TextStyle(
                               fontSize: Responsive.isMobile(context) ? 36 : 40,
-                              color: Colors.red,
-                              fontWeight: FontWeight.w800,
+                              color: Colors.blue,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                           const Text(
-                            "I'm Umar Tanwar, a Software Developer.\nSpecializing in Flutter Developement, API Integration, Python Development, & Data Science.",
+                            "I'm Umar Tanwar, a Software Developer.\nSpecializing in Flutter Development, API Integration, Python Development, & Data Science.",
                             style: TextStyle(
-                              fontSize: 17.5,
-                              fontWeight: FontWeight.w500,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.black87,
                             ),
                           )
                         ],

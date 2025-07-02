@@ -21,52 +21,43 @@ class RecentProject extends StatelessWidget {
         Wrap(
           children: [
             ProjectCard(
+              projectModel: projects[7],
+            ),
+            ProjectCard(
               projectModel: projects[0],
-              url: "https://github.com/UmarTanwar3527/Wallpaper-App",
             ),
             ProjectCard(
               projectModel: projects[1],
-              url: "https://github.com/UmarTanwar3527/flutter-auth",
             ),
             ProjectCard(
               projectModel: projects[2],
-              url: "https://github.com/UmarTanwar3527/Milk-Quality-Prediction",
             ),
             ProjectCard(
               projectModel: projects[3],
-              url: "https://github.com/UmarTanwar3527/django-contactus-project",
             ),
             ProjectCard(
               projectModel: projects[4],
-              url: "https://github.com/UmarTanwar3527/NLPsentimentanalysisProject5",
             ),
             ProjectCard(
               projectModel: projects[5],
-              url: "https://github.com/UmarTanwar3527/RestaurantReviws",
             ),
             ProjectCard(
               projectModel: projects[6],
-              url: "https://github.com/UmarTanwar3527/Storing-ChatGPT-Responce-In-Docs-File-with-Question-",
             ),
             // ProjectCard(
             //   projectModel: projects[1],
-            //   url: "",
             // ),
             // ProjectCard(
             //   projectModel: projects[2],
-            //   url: "",
             // ),
             // ProjectCard(
             //   projectModel: projects[3],
-            //   url: "",
             // ),
             // ProjectCard(
             //   projectModel: projects[4],
-            //   url: "",
             // ),
             // ProjectCard(
             //   projectModel: projects[5],
-            //   url: "",
             // ),
           ],
         )
@@ -77,8 +68,7 @@ class RecentProject extends StatelessWidget {
 
 class ProjectCard extends StatelessWidget {
   final ProjectModel projectModel;
-  final String url;
-  const ProjectCard({super.key, required this.projectModel, required this.url});
+  const ProjectCard({super.key, required this.projectModel});
 
   @override
   Widget build(BuildContext context) {
@@ -121,22 +111,52 @@ class ProjectCard extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(
-                  top: 15,
-                  bottom: 6,
-                ),
-                child: TextButton(
-                  onPressed: () {
-                    launchUrl(
-                      Uri.parse(url),
-                    );
-                  },
-                  child: const Text(
-                    "Check It Out",
-                    style: TextStyle(fontSize: 17),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  if (projectModel.liveDemoLink != null &&
+                      projectModel.liveDemoLink!.isNotEmpty)
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        top: 15,
+                        bottom: 6,
+                        right: 5,
+                      ),
+                      child: TextButton(
+                        onPressed: () {
+                          launchUrl(
+                            Uri.parse(projectModel.liveDemoLink!),
+                          );
+                        },
+                        child: Text(
+                          "Live Demo",
+                          style: TextStyle(
+                            fontSize: Responsive.isMobile(context) ? 14 : 17,
+                          ),
+                        ),
+                      ),
+                    ),
+                  Padding(
+                    padding: EdgeInsets.only(
+                      top: Responsive.isMobile(context) ? 12 : 15,
+                      bottom: Responsive.isMobile(context) ? 4 : 6,
+                      left: 5,
+                    ),
+                    child: TextButton(
+                      onPressed: () {
+                        launchUrl(
+                          Uri.parse(projectModel.githubLink!),
+                        );
+                      },
+                      child: Text(
+                        "GitHub",
+                        style: TextStyle(
+                          fontSize: Responsive.isMobile(context) ? 14 : 17,
+                        ),
+                      ),
+                    ),
                   ),
-                ),
+                ],
               ),
             ],
           ),
